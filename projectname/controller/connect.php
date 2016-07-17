@@ -1,5 +1,6 @@
 <?php
 // Function for connecting to the saiddit database
+
 function db_connect() {
 
     $host = "localhost:3306";
@@ -16,8 +17,8 @@ function db_connect() {
 	    echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
 	    exit;
 	}
-    
-    return $link;
+
+       return $link;
 	}
 
 ?>

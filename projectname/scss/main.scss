@@ -1,0 +1,12 @@
+post {
+  color: black;
+  list-style-type: none;
+}
+ 
+post li {
+  position: relative;
+  font: 45px/1.5 Helvetica, Verdana, sans-serif;
+  margin-bottom: 20px;
+  border: 3px solid grey;
+  padding: 10px;
+}

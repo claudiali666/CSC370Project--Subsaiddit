@@ -17,7 +17,7 @@ function db_connect() {
 	    echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
 	    exit;
 	}
-
+       //printf("connection sucess");
        return $link;
 	}
 

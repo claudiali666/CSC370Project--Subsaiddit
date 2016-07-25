@@ -27,20 +27,15 @@ include('connect.php');
       	if($result>0){
       		//parse data
       		while($row = mysqli_fetch_assoc($result)) {   
-      		  echo 
+      		    echo 
               '<div postid="'.$row['post_id'].'">
                <div> "upvote:"'.$row['up_vote'].', "down_vote:"'.$row['down_vote'].' </div>
                <li>' .$row['post_title'].'--------------'.($row['post_text']).'</li>
-                <button onclick="get_delete_Posts()" class="button round" >Delete</button>
                </div>
-               </li>';   
-               //$new_array[ $row['post_id']] = $row;      			
+               </li>';        			
       	 	}	
       	} 
 
-      	//$myJSONString = json_encode($new_array);
-
-        //printf($myJSONString);
       	
 	}  
 

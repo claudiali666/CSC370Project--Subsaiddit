@@ -1,8 +1,7 @@
 <?php
 session_start();
 include('connect.php');
-	// Function for connecting to the saiddit database
-  //if user is not logged in, show posts of default subsdaiddits
+
 $conn =  db_connect();
 function get_Account_Subsaiddit($conn, $username){
 		
@@ -49,7 +48,8 @@ function get_Default_Subsaiddit($conn){
             $error = sprintf("Query Failed: %s", mysql_error());
         }
 
-        if($result>0){
+        if($result>0)
+      {
           //parse data
           while($row = mysqli_fetch_assoc($result)) { 
             $json[] = $row;
@@ -58,7 +58,6 @@ function get_Default_Subsaiddit($conn){
 
        $json =json_encode($json); 
        echo $json;
-
 }
 
   $username = $_POST['name'];

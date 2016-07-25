@@ -2,24 +2,19 @@
 <html>
     <head>
         <title>Saiddit Login</title>
+        <link rel="stylesheet" href="css/login.css">
     </head>
     <body>
-        <div id="main">
-            <h1>Saiddit Login</h1>
-            <div id="login">
-                <h2>Login Form</h2>
-                <div class = "error_message"></div>
-                <form action="controller/login.php" method="post">
-                    <label>UserName :</label>
-                    <input id="name" name="username" placeholder="username" type="text">
-                    <label>Password :</label>
-                    <input id="password" name="password" placeholder="**********" type="password">
-                    <input name="submit" type="submit" value=" Login">
-                </form>
-            </div>
+        <div id="login">
+          <h1>Saiddit Login</h1>
+            <form action="controller/login.php" method="post">
+                <label>UserName :</label>
+                <input id="name" name="username" type="text">
+                <label>Password :</label>
+                <input id="password" name="password" type="password">
+                <p id="error"></p>
+                <button name="button" type="submit" class="btn btn-primary btn-block btn-large">Login</button>
+            </form>
         </div>
     </body>
 </html>
-
-
-

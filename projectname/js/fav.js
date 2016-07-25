@@ -15,46 +15,28 @@ $(document).ready(function() {
             if (data){
                 console.log("user should be login");
                 $("#js-login_btn").text(username);
-                 get_Friends_Posts();   
-                 //get_Friends_Fav_Posts(); 
+                 get_Account_Fav_Posts();    
             }     
           }
       }); 
-    });
+ });
 
-  function get_Friends_Posts() {
+
+
+function get_Account_Fav_Posts() {
            $.ajax({
             type: 'post',
-            url: '../controller/Friends.php',
-            data:{name: username},
-            dataType: "text",
-            success: function(data){
-                if (data){
-                      console.log(data);
-                     $('.Friends_Posts').html(data);
-                }else{
-                    console.log("cannot fetch data");
-                }
-            }
-        
-        });
-   }
-
-
-   function get_Friends_Fav_Posts() {
-            $.ajax({
-            type: 'post',
             url: '../controller/favourite.php',
-            data:{name: username},
+            data:{name: username, fav: "Y"},
             dataType: "text",
             success: function(data){
                 if (data){
                       console.log(data);
-                     $('.Friends_Fav_Posts').html(data);
+                     $('.Favourite_Posts').html(data);
                 }else{
                     console.log("cannot fetch data");
                 }
             }
         
         });
-   }
+}

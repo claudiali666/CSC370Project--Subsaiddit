@@ -4,30 +4,30 @@ var username = 'undefined';
 var postid = 0;
 $(document).ready(function() {
     console.log("loaded");
-    //update nav bar 
+    //update nav bar
     $.ajax({
         type: 'get',
         url: '../controller/UserLoggedIn.php',
         data: null,
         async: false,
-        success: function(data){ 
+        success: function(data){
             username = data;
             console.log(window.username);
         	console.log(data);
             if (data){
                 console.log("user should be login");
                 $("#js-login_btn").text(username);
-                 get_Login_Posts(); 
-                 get_Account_Subsaiddit();  
+                 get_Login_Posts();
+                 get_Account_Subsaiddit();
             }else{
             	 console.log("user should not be login");
                  get_Home_Page_Post();
                  get_Default_Subsaiddit();
             }
-         }                    
+         }
   	});
 
-});  
+});
 
     function get_Home_Page_Post() {
         //get homePage posts
@@ -44,11 +44,11 @@ $(document).ready(function() {
                     console.log("cannot fetch data");
                 }
             }
-        
+
         });
     }
 
-    //Post the username to the server 
+    //Post the username to the server
     function get_Login_Posts(){
           $.ajax({
             type: 'post',
@@ -63,7 +63,7 @@ $(document).ready(function() {
                     console.log("cannot fetch data");
                 }
             }
-          
+
         });
     }
 
@@ -85,7 +85,7 @@ $(document).ready(function() {
                     console.log("cannot fetch data");
                 }
             }
-          
+
         });
     }
 
@@ -99,15 +99,15 @@ $(document).ready(function() {
             success: function(data){
                 var HTML = "";
                 console.log(data);
-                $.each(data, function(index, element) {   
+                $.each(data, function(index, element) {
                      HTML += "<dd>";
                      HTML += "<li>" + element.subsaiddits_title + "</li>";
                      HTML += "</dd>";
                 });
-                 $("#subsaiddit").html(HTML);
+                $("#subsaiddit").html(HTML);
             }
         });
-        
+
     }
 
     function get_Default_Subsaiddit(){
@@ -118,18 +118,16 @@ $(document).ready(function() {
             dataType: "json",
             success: function(data){
                 var HTML = "";
-                $.each(data, function(index, element) {   
-                     HTML += "<dd>";
+                $.each(data, function(index, element) {
+                     //HTML += "<dd>";
                      HTML += "<li>" + element.subsaiddits_title + "</li>";
-                     HTML += "</dd>";
+                     //HTML += "</dd>";
                 });
                  $("#subsaiddit").html(HTML);
             }
         });
     }
 
+    function get_Account_Fav_Posts(){
 
-   
-    
-    
-
+    }

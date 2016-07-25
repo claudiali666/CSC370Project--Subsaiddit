@@ -30,8 +30,6 @@ include('connect.php');
             if($rows ==1){
                //store username
                $_SESSION['login_user'] = $username;
-               $_SESSION['user_name'] = $username; 
-               $loggedInUsername = $username;
                header('Location: ../index.html');
             }else{
                echo "wrong password";
@@ -41,7 +39,7 @@ include('connect.php');
     }
  
     //main routine
-    if(isset($_POST["submit"])){
+    if(isset($_POST["button"])){
              auth($_POST['username'], $_POST['password'], $conn);
     }
 

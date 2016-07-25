@@ -1,0 +1,75 @@
+input {
+	width: 100%;
+	margin-bottom: 10px;
+	background: rgba(0,0,0,0.3);
+	border: none;
+	outline: none;
+	padding: 10px;
+	font-size: 13px;
+	color: #fff;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+	border: 1px solid rgba(0,0,0,0.3);
+	border-radius: 4px;
+	box-shadow: inset 0 -5px 45px rgba(100,100,100,0.2), 0 1px 1px rgba(255,255,255,0.2);
+	-webkit-transition: box-shadow .5s ease;
+	-moz-transition: box-shadow .5s ease;
+	-o-transition: box-shadow .5s ease;
+	-ms-transition: box-shadow .5s ease;
+	transition: box-shadow .5s ease;
+}
+
+input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgba(255,255,255,0.2); }
+
+
+
+
+.btn {
+	margin-top: 30px;
+	margin-left: 45px;
+	font-family: open-sans;
+	background-color: rgb(247,148,148);
+	color: white;
+	border: none;
+	padding: 5px 80px 5px 80px;
+	font-size: 26px;
+	border-radius: 20px;
+}
+
+
+
+#login {
+	font-family: open-sans;
+	font-weight: bold;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -150px 0 0 -150px;
+	width:300px;
+	height:300px;
+}
+#login h1 {
+	font-family: cocogoose;
+	font-size: 38px;
+	color: #fff;
+	text-shadow: 0 0 10px rgba(0,0,0,0.3);
+	letter-spacing:1px;
+	text-align:center;
+}
+
+body {
+		background-image: url("http://images5.fanpop.com/image/photos/28500000/Dance-Party-pusheen-the-cat-28507027-500-350.gif");
+		background-size: 1000px 700px;
+		background-repeat: no-repeat;
+		background-position: center 7%;
+		background-color: rgb(252,240,228);
+}
+
+@font-face {
+    font-family: cocogoose;
+    src: url(/fonts/Cocogoose_trial.otf);
+}
+
+@font-face {
+    font-family: open-sans;
+    src: url(/fonts/OpenSans-Regular.ttf);
+}
